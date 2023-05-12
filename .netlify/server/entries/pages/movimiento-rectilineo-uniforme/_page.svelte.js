@@ -22,7 +22,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   });
   return `${validate_component(HeadTitle, "HeadTitle").$$render($$result, { title: "MRU" }, {}, {})}
 ${validate_component(Banner, "Banner").$$render($$result, { title: "Movimiento rectilineo uniforme" }, {}, {})}
-<form class="main-form"><fieldset class="main-fieldset"><div class="flex flex-col flex-1"><label class="title-label" for="speed">Velocidad</label>
+<form class="main-form" autocomplete="off"><fieldset class="main-fieldset"><div class="flex flex-col flex-1"><label class="title-label" for="speed">Velocidad</label>
 			<div class="flex space-x-1"><input name="speed" type="number" class="w-2/3 custom-input" placeholder="Ingresa la velocidad"${add_attribute("this", inputs.speed, 0)}>
 				<select class="w-1/3 custom-select-clean">${each(Object.entries(speedMagnitudes), (magnitude) => {
     return `<option${add_attribute("value", magnitude, 0)}>${escape(magnitude[1])}

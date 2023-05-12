@@ -40,7 +40,7 @@
 
 <HeadTitle title="MRUV" />
 <Banner title="Movimiento rectilineo uniformemente variado" />
-<form class="main-form">
+<form class="main-form" autocomplete="off">
 	{#if inputs}
 		<fieldset class="main-fieldset">
 			<div class="flex flex-col flex-1">

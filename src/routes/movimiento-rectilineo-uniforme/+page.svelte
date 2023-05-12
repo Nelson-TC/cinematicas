@@ -35,7 +35,7 @@
 
 <HeadTitle title="MRU" />
 <Banner title="Movimiento rectilineo uniforme" />
-<form class="main-form">
+<form class="main-form" autocomplete="off">
 	<fieldset class="main-fieldset">
 		<div class="flex flex-col flex-1">
 			<label class="title-label" for="speed">Velocidad</label>

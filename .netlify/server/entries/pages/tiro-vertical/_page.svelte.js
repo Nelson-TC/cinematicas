@@ -22,7 +22,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   });
   return `${validate_component(HeadTitle, "HeadTitle").$$render($$result, { title: "Tiro vertical" }, {}, {})}
 ${validate_component(Banner, "Banner").$$render($$result, { title: "Tiro vertical" }, {}, {})}
-<form class="main-form">${inputs ? `<fieldset class="main-fieldset"><div class="flex flex-col flex-1"><label class="title-label" for="initialSpeed">Velocidad Inicial</label>
+<form class="main-form" autocomplete="off">${inputs ? `<fieldset class="main-fieldset"><div class="flex flex-col flex-1"><label class="title-label" for="initialSpeed">Velocidad Inicial</label>
 				<div class="flex space-x-4"><input type="number" step="any" name="initialSpeed" class="w-2/3 custom-input" placeholder="Ingresa la velocidad"${add_attribute("this", inputs.initialSpeed, 0)}>
 					<select class="w-1/3 custom-select-clean">${each(Object.entries(speedMagnitudes), (magnitude) => {
     return `<option${add_attribute("value", magnitude, 0)}>${escape(magnitude[1])}

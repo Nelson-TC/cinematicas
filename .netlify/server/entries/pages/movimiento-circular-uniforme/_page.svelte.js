@@ -23,7 +23,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   });
   return `${validate_component(HeadTitle, "HeadTitle").$$render($$result, { title: "MCU" }, {}, {})}
 ${validate_component(Banner, "Banner").$$render($$result, { title: "Movimiento circular uniforme" }, {}, {})}
-<form class="main-form">${inputs ? `<fieldset class="main-fieldset"><div class="flex flex-col flex-1"><label class="title-label" for="angle">Ángulo</label>
+<form class="main-form" autocomplete="off">${inputs ? `<fieldset class="main-fieldset"><div class="flex flex-col flex-1"><label class="title-label" for="angle">Ángulo</label>
 				<div class="flex space-x-4"><input type="number" step="any" name="angle" class="w-2/3 custom-input" placeholder="Ingresa el ángulo"${add_attribute("this", inputs.angle, 0)}>
 					<select class="w-1/3 custom-select-clean">${each(Object.entries(angleAngularMagnitudes), (magnitude) => {
     return `<option${add_attribute("value", magnitude, 0)}>${escape(magnitude[1])}

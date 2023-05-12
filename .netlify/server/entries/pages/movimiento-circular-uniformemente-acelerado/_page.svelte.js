@@ -29,7 +29,7 @@ ${validate_component(Banner, "Banner").$$render(
     {},
     {}
   )}
-<form class="main-form">${inputs ? `<fieldset class="main-fieldset"><div class="flex flex-col flex-1"><label class="title-label" for="angularInitialSpeed">Velocidad Angular Inicial</label>
+<form class="main-form" autocomplete="off">${inputs ? `<fieldset class="main-fieldset"><div class="flex flex-col flex-1"><label class="title-label" for="angularInitialSpeed">Velocidad Angular Inicial</label>
 				<div class="flex space-x-4"><input type="number" step="any" name="angularInitialSpeed" class="w-2/3 custom-input" placeholder="Ingresa la velocidad angular"${add_attribute("this", inputs.angularInitialSpeed, 0)}>
 					<select class="w-1/3 custom-select-clean">${each(Object.entries(speedAngularMagnitudes), (magnitude) => {
     return `<option${add_attribute("value", magnitude, 0)}>${escape(magnitude[1])}
