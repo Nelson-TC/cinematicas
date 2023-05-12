@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input {
+  -moz-appearance: textfield;
+
+}
+body{
+  @apply bg-main-background
+}
+
+.main-container{
+  @apply container max-w-6xl mx-auto px-4 md:px-1 py-2
+}
+.title-label{
+  @apply font-semibold text-black
+}
+.custom-input{
+  @apply transition-all focus:outline-none p-2 focus:ring-2 focus:ring-main-primary focus:border-main-primary rounded border-2 border-main-black-light disabled:border-none disabled:bg-main-light disabled:text-main-primary disabled:font-semibold
+}
+.custom-select-clean{
+  @apply px-4 font-semibold cursor-pointer outline-none text-main-primary bg-white
+}
+.main-form{
+  @apply flex flex-col md:space-x-4 md:flex-row
+}
+.main-fieldset{
+  @apply flex flex-col w-full p-4 mx-auto space-y-4 md:flex-1 md:w-auto rounded-lg bg-white shadow
+}
+
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+  }
+  
+  #nprogress .bar {
+    background: #f97316;
+  
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 3px;
+  }
+  
+  /* Fancy blur effect */
+  #nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #f97316, 0 0 5px #f97316;
+    opacity: 1.0;
+  
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+        -ms-transform: rotate(3deg) translate(0px, -4px);
+            transform: rotate(3deg) translate(0px, -4px);
+  }
+  
+  /* Remove these to get rid of the spinner */
+  #nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 15px;
+    right: 15px;
+  }
+  
+  #nprogress .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+  
+    border: solid 3px transparent;
+    border-top-color: #f97316;
+    border-left-color: #f97316;
+    border-radius: 50%;
+  
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+            animation: nprogress-spinner 400ms linear infinite;
+  }
+  
+  .nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .nprogress-custom-parent #nprogress .spinner,
+  .nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+  }
+  
+  @-webkit-keyframes nprogress-spinner {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes nprogress-spinner {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
